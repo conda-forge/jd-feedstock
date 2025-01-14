@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-set -ex
+set -o xtrace -o nounset -o pipefail -o errexit
 
-cd $SRC_DIR
-go build -ldflags "-X main.revision=conda-forge" -v -o $PREFIX/bin/jd
+go build -buildmode=pie -trimpath -ldflags "-w -s -X main.revision=conda-forge" -v -o $PREFIX/bin/jd
 go-licenses save . --save_path ./library_licenses
