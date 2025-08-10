@@ -1,5 +1,5 @@
 {% set name = "jd" %}
-{% set version = "2.2.5" %}
+{% set version = "2.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/josephburnett/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 9f5cf5c0955372b75c8877a9811e0b9ead3682603231558484f47352ee097e9c
+  sha256: 4d88a9d9439555de63604ab712f937e6c9b418c43ecaf2e976b3a49282dbf236
 
 build:
   number: 0
