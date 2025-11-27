@@ -1,0 +1,37 @@
+schema_version: 1
+
+context:
+  version: 2.2.2
+
+package:
+  name: jd
+  version: ${{ version }}
+
+source:
+  url: https://github.com/josephburnett/jd/archive/v${{ version }}.tar.gz
+  sha256: 85abf994c1f11aa0c2d13db03b2f02cb458e987ceaaccf4200b10193dd2895af
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - ${{ compiler('go-nocgo') }}
+    - go-licenses
+
+tests:
+  - script:
+      - jd --help
+
+about:
+  summary: JSON diff and patch
+  license: MIT
+  license_file:
+    - LICENSE
+    - library_licenses/
+  homepage: https://github.com/josephburnett/jd
+
+extra:
+  recipe-maintainers:
+    - danielnachun
+    - moritzwilksch
