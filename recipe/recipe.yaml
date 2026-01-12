@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.3.1"
+  version: "2.4.0"
 
 package:
   name: jd
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/josephburnett/jd/archive/v${{ version }}.tar.gz
-  sha256: 914d6f131d6223b2805a33f6c39ceba647a2dd06e4cc3cf0eba8c20b9199bf63
+  sha256: 084aeab667883da93dea85ece23e517e9d35aa1cfbf2e86dfc360556f71d2f83
 
 build:
   number: 0
